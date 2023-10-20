@@ -18,3 +18,9 @@ export function getStringInfo(s: string): TStringInfo {
 		character: s.split('')
 	};
 }
+
+export class StringUtil {
+	public toUpperCase(s:string){
+		return toUpperCase(s);
+	}
+}
