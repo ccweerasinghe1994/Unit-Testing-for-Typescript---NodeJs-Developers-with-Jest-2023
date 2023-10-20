@@ -24,6 +24,25 @@ describe('Utils test suite', () => {
 		};
 		const actual = sut('hello');
 
+		describe('toUpperCase examples', () => {
+			it.only.each([
+				{
+					input: 'hello',
+					expected: 'HELLO'
+				},
+				{
+					input: 'hElLo',
+					expected: 'HELLO'
+				},
+				{
+					input: 'HELLO',
+					expected: 'HELLO'
+				}
+			])('$input should return $expected', ({ input, expected }) => {
+				expect(toUpperCase(input)).toBe(expected);
+			});
+		});
+
 		describe('getStringInfo() for argument "hello"', () => {
 			it('should return the right lowercase string', () => {
 				expect(actual.loweCase).toBe(expected.loweCase);
